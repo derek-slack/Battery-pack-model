@@ -141,7 +141,7 @@ class Circuit:
         n = len(I0)
 
         if I_bounds is None:
-            I_bounds = [(-50, 50)] * n  # Example bounds
+            I_bounds = [(-5, 5)] * n  
 
         def simulate_get_voltage(I_test):
             """Step simulation forward and pull voltage for candidate current vector."""
