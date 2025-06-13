@@ -232,7 +232,7 @@ def evaluate_pybamm_clone(betas, mtx, inputs):
 
                 for jj in range(4):
                     phispace = phis[nid][jj].reshape(1,-1)
-                    phi_interp = scipy.interpolate.interp1d(lspace[0], phispace[0])(phind[j])
+                    phi_interp = pybamm.Interpolant(lspace[0], phispace[0], phind[j])
                     coeff.append(phi_interp)
 
             # multiplies phi(x0)*phi(x1)*etc.
